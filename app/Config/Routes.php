@@ -36,8 +36,6 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->get('/information', 'Information::index');
-$routes->get('/information/{number}', 'Information::show');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
@@ -54,3 +52,6 @@ $routes->get('/information/{number}', 'Information::show');
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+
+//Las rutas se colocan aqui jajaja no se por que xd 
+$routes->get('listarLibros', 'BookController::index');
