@@ -54,4 +54,4 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 }
 
 //Las rutas se colocan aqui jajaja no se por que xd 
-$routes->get('listarLibros', 'BookController::index');
+$routes->resource('book');

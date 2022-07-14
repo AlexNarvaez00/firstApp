@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<!--
-	En esta vista vamos a listar a todos los libros que tenemos en la base 
-	de datos.
--->
 <html lang="es">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Listado de los libros</title>
+	<title>Home</title>
+	<link rel="stylesheet" href="../css/bootstrap.css" media="all">
 </head>
 
 <body>
-	<h1>Listado de los libros</h1>
-	<p>
-		<?php
-		/**
-		 * Iteramos el arreglo que contiene los elementos de la base de datos
-		 */
-		?>
-	<ul>
-		<?php
-		foreach ($elements as $item) {
-			echo '<li>';
-			echo '<span>id:' . $item['id'] . '</span>';
-			echo '<ul>';
-			echo '<li>' . $item['titulo'] . '</li>';
-			echo '<li>' . $item['paginas'] . '</li>';
-			echo '</ul>';
-			echo '</li>';
-		}
-		?>
-	</ul>
-	</p>
+	<div class="container-fluid">
+		<div class="container">
+			<section>
+				<?php include __DIR__ . '/../Components/Header.php' ?>
+			</section>
+			<main>
+				<section class="mt-5 px-4">
+					<?php foreach ($elements as $item) { ?>
+						<p class="fw-bold">
+							<?php echo $item['id'] ?>
+						</p>
+						<ul>
+							<li><?php echo $item['titulo'] ?></li>
+							<li><?php echo $item['paginas'] ?></li>
+						</ul>
+					<?php } ?>
+				</section>
+			</main>
+		</div>
+	</div>
+
+	<script src="js/bootstrap.bundle.js"></script>
 </body>
+
+</html>
+
+</html>
 
 </html>
