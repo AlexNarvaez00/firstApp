@@ -13,7 +13,26 @@
 
 <body>
 	<h1>Listado de los libros</h1>
-
+	<p>
+		<?php
+		/**
+		 * Iteramos el arreglo que contiene los elementos de la base de datos
+		 */
+		?>
+	<ul>
+		<?php
+		foreach ($elements as $item) {
+			echo '<li>';
+			echo '<span>id:' . $item['id'] . '</span>';
+			echo '<ul>';
+			echo '<li>' . $item['titulo'] . '</li>';
+			echo '<li>' . $item['paginas'] . '</li>';
+			echo '</ul>';
+			echo '</li>';
+		}
+		?>
+	</ul>
+	</p>
 </body>
 
 </html>
