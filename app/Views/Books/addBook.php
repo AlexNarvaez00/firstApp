@@ -16,28 +16,31 @@
 			</section>
 			<main>
 				<section class="mt-5 px-4">
-					<form action="">
-						<div class="mb-3">
-							<label class="form-label" for=""></label>
-							<input class="form-control" type="">
+					<div class="row justify-content-center">
+						<div class="col-8 col-md-6 col-sm-12">
+							<form action="<?= site_url('book') ?>" method="POST" enctype="multipart/form-data">
+								<div class="mb-3">
+									<label class="form-label" for="id">ID</label>
+									<input class="form-control" type="text" id="id" name="id">
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="titulo">Titutlo</label>
+									<input class="form-control" type="text" id="titulo" name="titulo">
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="paginas">Paginas</label>
+									<input class="form-control" type="number" id="paginas" name="paginas">
+								</div>
+								<div class="mb-3">
+									<button class="btn btn-primary" type="submit">Guardar</button>
+								</div>
+							</form>
 						</div>
-						<div class="mb-3">
-							<label class="form-label" for=""></label>
-							<input class="form-control" type="">
-						</div>
-						<div class="mb-3">
-							<label class="form-label" for=""></label>
-							<input class="form-control" type="">
-						</div>
-						<div class="mb-3">
-							<button class="btn btn-primary"></button>
-						</div>
-					</form>
+					</div>
 				</section>
 			</main>
 		</div>
 	</div>
-
 	<script src="js/bootstrap.bundle.js"></script>
 </body>
 

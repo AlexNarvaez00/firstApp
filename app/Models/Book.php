@@ -10,14 +10,14 @@ class Book extends Model
 	protected $table            = 'books';
 	protected $primaryKey       = 'id';
 	protected $useAutoIncrement = false;
-	protected $insertID         = 0;
+	protected $insertID         = '';
 	protected $returnType       = 'array';
 	protected $useSoftDeletes   = false;
 	protected $protectFields    = true;
 	protected $allowedFields    = ['id', 'titulo', 'paginas']; //Atributo para definir los campos a consultar
 
 	// Dates
-	protected $useTimestamps = true;
+	protected $useTimestamps = false;
 	protected $dateFormat    = 'datetime';
 	protected $createdField  = 'created_at';
 	protected $updatedField  = 'updated_at';
@@ -26,11 +26,11 @@ class Book extends Model
 	// Validation
 	protected $validationRules      = [];
 	protected $validationMessages   = [];
-	protected $skipValidation       = false;
+	protected $skipValidation       = true;
 	protected $cleanValidationRules = true;
 
 	// Callbacks
-	protected $allowCallbacks = true;
+	protected $allowCallbacks = false;
 	protected $beforeInsert   = [];
 	protected $afterInsert    = [];
 	protected $beforeUpdate   = [];

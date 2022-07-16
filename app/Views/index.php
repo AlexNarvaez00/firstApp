@@ -14,7 +14,17 @@
 			<section>
 				<?php include 'Components/Header.php' ?>
 			</section>
+			<main>
+				<p>
+					¡Hola, estas en el inicio de todo!
+
+				</p>
+				<p>__DIR__ <?= __DIR__ ?></p>
+				<p>__FILE__<?= __FILE__ ?></p>
+
+			</main>
 		</div>
+
 	</div>
 	<script src="js/bootstrap.bundle.js"></script>
 </body>
