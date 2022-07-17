@@ -14,9 +14,12 @@ class Book extends BaseController
 	public function index()
 	{
 		$books = new BookModel();
-		$allRows = $books->findAll();
+		$allRows = $books->paginate(5);
 		//Para pasarle los datos a la vista forzosamente se debe de llamar $data
-		$data = ['rows' => $allRows];
+		$data = [
+			'rows' => $allRows,
+			'pager' => $books->pager
+		];
 		return view('Books/indexBook', $data);
 	}
 	/**
